@@ -14,7 +14,7 @@ const Blog = ({ props }) => {
   const [response,setResponse] = useState([]);
 
   useEffect( async () => {
-    const response = await axios.get('http://localhost:3012/blogs');
+    const response = await axios.get('http://api.happpy.ga/blogs');
     setResponse(response.data)
     
     console.log(id);
