@@ -33,7 +33,7 @@ class InputBlog extends React.Component {
     const {title,article} = this.state
     event.preventDefault();
     this.setState({loading:true,redirect:true })
-    const response = await axios.post('http://localhost:3012/blog',{
+    const response = await axios.post('http://api.happpy.ga/blog',{
       title,
       article
     })
