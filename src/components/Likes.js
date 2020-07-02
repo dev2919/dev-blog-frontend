@@ -6,7 +6,7 @@ const Likes = (props) => {
   console.log(props.refresh);
 
   useEffect(async () => {
-    const response = await axios.get('http://localhost:3012/blogs');
+    const response = await axios.get('http://api.happpy.ga/blogs');
   }, [])
 
   const [likes,setLikes] = useState(props.items);
