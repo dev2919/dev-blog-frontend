@@ -21,7 +21,7 @@ export default class App extends React.Component {
   };
 
   componentDidMount = async () =>{
-    const response = await axios.get('http://localhost:3012/blogs');
+    const response = await axios.get('http://api.happpy.ga/blogs');
     
     this.setState({
       response:response.data,
@@ -55,7 +55,7 @@ export default class App extends React.Component {
       let key = e.target.className
       let obj = this.state.likes.find(o => o.id === key);
       console.log(obj);
-      console.log(`http://localhost:3012/like/${obj.id}`);
+      console.log(`http://api.happpy.ga/like/${obj.id}`);
       const response = await axios.patch(`http://localhost:3012/like/${obj.id}`,{
       likes:parseInt(obj.hearts)+1
     })  
